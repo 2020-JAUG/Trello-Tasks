@@ -7,8 +7,13 @@ class Cards extends Component {
         this.state = {  }
     }
 
+    handleInput() {
+        console.log('writing')
+    }
+
     render() { 
 
+        
         return (
     
     <div className="row mx-4">
@@ -24,13 +29,33 @@ class Cards extends Component {
         </div>
             
         <div className="col-md-3">
-            <div className= "card  mt-5">
+            <div className= "card mt-5">
                 <div className="card-header">Task 2
                 </div>
                     <div className="card-body">
                         <input type="text" name="title" className="form-control" placeholder=" + add a list">
                         </input>
                     </div>
+            </div>
+        </div> 
+
+        <div className="col-md-3">
+            <div className= "card  mt-5">
+                <div className="card-header">Task 3
+                </div>
+                    <div className="card-body">
+                        <input type="text" name="title" className="form-control" placeholder=" + add a list">
+                        </input>
+                    </div>
+            </div>
+        </div>
+
+        <div className="col-md-3">
+            <div className="card mt-5">
+                <div className="card-header">
+                    <input type="text" name="title" onChange={this.handleInput} className="form-control" placeholder=" + add a card">
+                    </input>
+                </div>
             </div>
         </div>
     </div>
