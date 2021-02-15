@@ -1,4 +1,4 @@
-# Introduccion al reto trello con Create React App
+# Introducción al reto Trello con Create React App
 
 ¡Reto GeekkHubs!😎
 
