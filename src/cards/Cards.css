@@ -1,5 +1,11 @@
 .container{
     display: flex;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: row;
+}
+
+.card-body {
+    align-items: flex-start;
+    
 }

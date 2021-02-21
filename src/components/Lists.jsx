@@ -1,17 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class Lists extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {  }
-    }
-    render() { 
+    render() {
         return (
-        <div className="">
-            
-        </div>
-          );
+            <div>
+                
+            </div>
+        )
     }
 }
- 
-export default Lists;
+
+export default Lists

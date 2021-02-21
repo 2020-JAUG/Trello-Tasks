@@ -1,18 +1,13 @@
 import React from 'react';
 
-
-function TodoForm() {
-
-    
-
-    return (
-
-    <div className="">
-        
-    
-    </div>
-    
-    )
-
+const Form = () => {
+    return ( 
+        <>
+       
+       
+        </>
+     );
 }
-export default TodoForm;
+ 
+export default Form;
+
