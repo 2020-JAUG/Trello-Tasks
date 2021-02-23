@@ -1,5 +1,6 @@
 import React from 'react';
-import Nav from './header/Nav.jsx';
+import Home from './components/Home.jsx';
+import Agregar from './components/Agregar.jsx';
 import Cards from './components/Cards.jsx';
 
 
@@ -7,13 +8,13 @@ import Cards from './components/Cards.jsx';
 
 function App() {
   return (
-    <>
+  <>
+    <Home/>
+    <Agregar/>
+    <Cards/>    
       
-      <Nav />
-      <Cards />
       
-      
-    </>
+  </>
   );
 };
 export default App;
