@@ -2,11 +2,11 @@ import React from 'react';
 
 function Nav() {
     return (
-        <>
-        <nav>Trello</nav>
+    <>
+        <nav className="nav">Trello</nav>
         
-        </>
-
-    )
-}
+    
+    </>
+    );
+};
 export default Nav;
