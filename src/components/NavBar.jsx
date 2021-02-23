@@ -1,12 +1,11 @@
 import React from 'react';
-import { NavLink, withRouter } from 'react-router-dom';
 
 const NavBar = () => ( 
 <>
+    <h1>Trello</h1>
 
 
 </>
- );
+);
 
- 
 export default NavBar;
