@@ -4,8 +4,8 @@ import logo from '../assets/img/logo.png';
 
 const Navbar = () => ( 
 <> 
-    <nav className="navbar navbar-expand-lg navbar-toggleable-md navbar-inverse navbar-light">
-        <button className="navbar-toggler navbar-toggle-rigth" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav className="navbar navbar-expand-lg   navbar-light">
+        <button className="navbar-toggler collapsed navbar-toggle-rigth" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
         </button>
             <a className="navbar-logo" href="/#">
@@ -13,28 +13,29 @@ const Navbar = () => (
             </a>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav mr-auto">
-                    <li className="nav-item">
-                        <a className="nav-link" href="/#">Home</a>
+                    <li className="nav-item active">
+                    <a className="nav-link" href="/#">Home</a>
                     </li>
-                    <li className="nav-item">
+                        <li className="nav-item">
                         <a className="nav-link" href="/#">Link</a>
-                    </li>
-                    <li className="nav-item">
+                        </li>
+                        <li className="nav-item">
                         <a className="nav-link" href="/#">About</a>
                     </li>
                 </ul>
-                 <a className="navbar-brand hidden-md-down" href="/#">Trello</a>
-                    <ul className="navbar-nav ml-auto">
+                    <a className="navbar-brand hidden-md-down font-weight-bold" href="/#"><h3>Trello</h3></a>
+               
+                <ul className="navbar-nav ml-auto">
+                    <li className="nav-item">
+                    <a className="nav-link" href="/#">Home</a>
+                    </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/#">Home</a>
+                        <a className="nav-link" href="/#">Link</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/#">Link</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/#">About</a>
-                        </li>
-                    </ul>
+                        <a className="nav-link" href="/#">About</a>
+                    </li>
+                </ul>
             </div>
     </nav>
 </>
