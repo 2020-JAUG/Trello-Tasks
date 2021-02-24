@@ -51,8 +51,8 @@ h2 {
 }
 
 .root{
-  --linkedin:rgb(124, 158, 223);
   --github:rgb(17, 17, 17);
+  --linkedin:rgb(124, 158, 223);
   --twitter:rgb(201, 178, 50); 
 }
 
@@ -68,7 +68,7 @@ h2 {
   display:block;
   padding:0 10px;
   background:transparent;
-  color:rgba(4, 4, 4, 0.907);
+  color:rgba(26, 4, 17, 0.907);
   line-height: 50px;
   font-size: 25px;
   transition: .2s;
