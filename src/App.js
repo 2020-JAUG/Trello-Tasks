@@ -1,6 +1,7 @@
 import React from 'react';
-import NavBar from './components/NavBar.jsx';
+import Navbar from './components/Navbar.jsx';
 import Cards from './components/Cards.jsx';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -8,7 +9,7 @@ import Cards from './components/Cards.jsx';
 function App() {
   return (
   <>
-    <NavBar/>
+    <Navbar/>
     <Cards/>    
       
       
