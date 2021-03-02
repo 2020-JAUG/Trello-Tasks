@@ -1,19 +1,55 @@
 import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
-const Card = () => { 
 
+const Card = ({crearTask, eliminarTask}) => { 
+
+    const [task, setTaks] = useState({ 
+        text: '',
+        doing: '',
+        hecho: ''
+    })
+
+    const [setError] = useState(false)
+
+    //Sending state
     const [newTask, setTask] = useState([])
 
-    const [task, setTaks] = useState([])
+    //Function to upgrade the input, and We use array destructuring
+    const handleChange = (e) => {
+        //console.log(e.target.value)
+        setTaks( {...task, [e.target.name]: e.target.value})
+    };
+
+    const { text, doing, hecho } = task;    
+
+    //Sending data
+    const handleSubmit =  () => {
+        //e.preventDefault();
+       //console.log(task.text + ' ' + task.doing)
+        setTask([...newTask, task]) 
 
 
-    const handleInput = (e) => {
-        console.log(e.target.value, e.target.name)
-    }
+    //Validating the task. NOTE: Trim removes blanks
+    if(text.trim() === ' ' || doing.trim() === ' ' || hecho.trim() === ' ' ){
+        setError(true);
+        return;
+    };
 
-    const handleSubmit = () => {
-        
-        console.log('Sending..')
+    //Assign an id
+    task.id= uuidv4();
+    console.log(task);
+
+    
+    //Create task in main state
+    crearTask(task);
+
+    //Reset form
+    setTaks({
+        text: '',
+        doing: '',
+        hecho: ''
+    })
     }
 
 
@@ -24,17 +60,19 @@ const Card = () => {
                 <div className= "card mt-5">
                     <div className="card-header card-wrapper">Tasks
                     </div>
-                        <div className="card-body"><div>{handleSubmit.map}</div>
+                        <div className="card-body" onSubmit={handleSubmit}><div>{handleSubmit.map}</div>
                             <input 
                                 type="text" 
-                                name="task1" 
-                                onChange={handleInput} 
+                                name="text"
+                                onChange={handleChange} 
                                 className="form-control" 
                                 placeholder=" + add a list"                           
                            />
+                           
                                 <div className="mt-3">
                                     <button 
-                                        type="button" 
+                                        type="button"
+                                        name="agregar" 
                                         value="submit" 
                                         onClick={ () => handleSubmit()} 
                                         className="form-control"
@@ -43,7 +81,7 @@ const Card = () => {
                         </div>
                 </div>
             </div>
-                
+
             <div className="col-md-3">
                 <div className= "card mt-5">
                     <div className="card-header">Doing
@@ -51,8 +89,8 @@ const Card = () => {
                         <div className="card-body">
                             <input 
                                 type="text" 
-                                name="doing" 
-                                onChange={handleInput} 
+                                name="doing"
+                                onChange={handleChange} 
                                 className="form-control" 
                                 placeholder=" + add a list"
                             />
@@ -60,15 +98,14 @@ const Card = () => {
                 </div>
             </div> 
 
-            <div className="col-md-3">
-                <div className= "card  mt-5">
+            <div className="col ml-3">
+                <div className="card mt-5">
                     <div className="card-header">Do
-                    </div>  
+                    </div>
                         <div className="card-body">
                             <input 
                                 type="text"
-                                name="do" 
-                                onChange={handleInput} 
+                                name="hecho"
                                 className="form-control" 
                                 placeholder=" + add a list"
                             />
@@ -82,7 +119,7 @@ const Card = () => {
                         <input 
                         type="text" 
                         name="card" 
-                        onChange={handleInput} 
+                        onChange={handleChange} 
                         className="form-control" 
                         placeholder=" + add a card"
                         />
@@ -95,3 +132,12 @@ const Card = () => {
 };
  
 export default Card;
+
+/*
+
+ <button
+                                    className="button eliminar primary"
+                                    oncClick={() => eliminarTask(task.id)}
+                                    Eliminar></button>
+
+*/
