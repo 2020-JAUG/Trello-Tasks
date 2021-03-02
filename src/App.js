@@ -24,19 +24,17 @@ function App() {
 }
   return (
     <Fragment>
-      <div className="row mx-3">
         <TaskRow />
         <Navbar />
         <Card 
           crearTask={crearTask}
         />
         {tasks.map(task => (
-          <TaskRow
+          <AddList
           key={task.id}
           task={task}
           />
         ))} 
-      </div>
 </Fragment>
   );
 };
