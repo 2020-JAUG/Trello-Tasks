@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 
-const Card = ({crearTask, eliminarTask}) => { 
+const Card = ({ crearTask, eliminarTask }) => { 
     //Creating tasks in the main state
     const [task, setTaks] = useState({ 
         text: '',

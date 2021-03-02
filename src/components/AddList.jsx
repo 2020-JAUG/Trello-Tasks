@@ -1,11 +1,19 @@
+import { Card } from '@material-ui/core';
 import React from 'react';
 
 
-const AddList = () => ( 
+
+const AddList = ({ task }) => ( 
 <>
-    
-  <h2>Pruebas</h2>
-  
+    <div className="task">
+    <div className="row mx-4">
+      <div div className="col-md-3">
+        <Card
+        { ...task.text }  
+        />
+      </div>
+    </div>
+    </div>
   
 </>
  );

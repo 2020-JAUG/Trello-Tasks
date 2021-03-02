@@ -3,6 +3,7 @@ import Navbar from './components/Navbar.jsx';
 import Card from './components/Card.jsx';
 import TaskRow from './components/TaskRow.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import AddList from './components/AddList.jsx';
 
 
 
@@ -23,13 +24,20 @@ function App() {
 }
   return (
     <Fragment>
-    <TaskRow />
-    <Navbar/>
-    <Card
-    crearTask={crearTask}
-    /> 
-    
-  </Fragment>
+      <div className="row mx-3">
+        <TaskRow />
+        <Navbar />
+        <Card 
+          crearTask={crearTask}
+        />
+        {tasks.map(task => (
+          <TaskRow
+          key={task.id}
+          task={task}
+          />
+        ))} 
+      </div>
+</Fragment>
   );
 };
 export default App;
