@@ -40,8 +40,6 @@ const Card = ({crearTask, eliminarTask}) => {
 
     //Assign an id
     task.id= uuidv4();
-    console.log(task);
-
     
     //Create task in main state
     crearTask(task);
