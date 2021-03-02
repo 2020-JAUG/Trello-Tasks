@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+
+const TaskRow = () => {
+    return ( 
+    <Fragment>
+        
 
 
-const TaskRow = () => (
-<>
-    <h3>Hello card</h3>
-</>
-);
+
+
+
+    </Fragment>   
+    );
+}
+ 
 export default TaskRow;
-
-

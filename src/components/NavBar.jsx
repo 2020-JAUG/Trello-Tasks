@@ -42,13 +42,3 @@ const Navbar = () => (
 );
 
 export default Navbar;
-
-/*</nav><a className="navbar-brand" href="#">Home</a>
-
-<nav className="navbar navbar-expand navbar-light flex-column flex-md-row bd-navbar">
-<ul className="nav justify-content-center">
-    <h2 nav className="justify-content-center">Trello</h2>
-</ul>
-
-</nav>
-*/
