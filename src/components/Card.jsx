@@ -3,11 +3,12 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 const Card = ({crearTask, eliminarTask}) => { 
-
+    //Creating tasks in the main state
     const [task, setTaks] = useState({ 
         text: '',
         doing: '',
-        hecho: ''
+        hecho: '',
+        card: ''
     })
 
     const [setError] = useState(false)
@@ -21,17 +22,18 @@ const Card = ({crearTask, eliminarTask}) => {
         setTaks( {...task, [e.target.name]: e.target.value})
     };
 
-    const { text, doing, hecho } = task;    
+    //Extract the values
+    const { text, doing, hecho, card } = task;    
 
     //Sending data
-    const handleSubmit =  () => {
-        //e.preventDefault();
+    const handleSubmit =  (e) => {
+        e.preventDefault();
        //console.log(task.text + ' ' + task.doing)
         setTask([...newTask, task]) 
 
 
     //Validating the task. NOTE: Trim removes blanks
-    if(text.trim() === ' ' || doing.trim() === ' ' || hecho.trim() === ' ' ){
+    if(text.trim() === ' ' || doing.trim() === ' ' || hecho.trim() === ' ' || card.trim() === ' ' ){
         setError(true);
         return;
     };
@@ -48,7 +50,8 @@ const Card = ({crearTask, eliminarTask}) => {
     setTaks({
         text: '',
         doing: '',
-        hecho: ''
+        hecho: '',
+        card: ''
     })
     }
 
@@ -64,7 +67,8 @@ const Card = ({crearTask, eliminarTask}) => {
                             <input 
                                 type="text" 
                                 name="text"
-                                onChange={handleChange} 
+                                onChange={handleChange}
+                                value={text} 
                                 className="form-control" 
                                 placeholder=" + add a list"                           
                            />
@@ -74,7 +78,7 @@ const Card = ({crearTask, eliminarTask}) => {
                                         type="button"
                                         name="agregar" 
                                         value="submit" 
-                                        onClick={ () => handleSubmit()} 
+                                        onClick={handleSubmit} 
                                         className="form-control"
                                     >Add</button>
                                 </div>
@@ -90,7 +94,8 @@ const Card = ({crearTask, eliminarTask}) => {
                             <input 
                                 type="text" 
                                 name="doing"
-                                onChange={handleChange} 
+                                onChange={handleChange}
+                                value={doing} 
                                 className="form-control" 
                                 placeholder=" + add a list"
                             />
@@ -106,6 +111,8 @@ const Card = ({crearTask, eliminarTask}) => {
                             <input 
                                 type="text"
                                 name="hecho"
+                                onChange={handleChange}
+                                value={hecho} 
                                 className="form-control" 
                                 placeholder=" + add a list"
                             />
@@ -119,7 +126,8 @@ const Card = ({crearTask, eliminarTask}) => {
                         <input 
                         type="text" 
                         name="card" 
-                        onChange={handleChange} 
+                        onChange={handleChange}
+                        value={card} 
                         className="form-control" 
                         placeholder=" + add a card"
                         />
