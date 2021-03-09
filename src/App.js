@@ -1,59 +1,66 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Component } from 'react';
 import Navbar from './components/Navbar.jsx';
-import Card from './components/Card.jsx';
-import TaskRow from './components/TaskRow.jsx';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import AddList from './components/AddList.jsx';
+import TrelloList from './components/TrelloList.jsx';
+import { connect } from 'react-redux';
+import TrelloButton from './components/TrelloButton.jsx';
+import { DragDropContext, Draggable } from 'react-beautiful-dnd';
+import { sort } from './actions';
 
+class App extends Component {
+//When we Dragg and drop the lists
+  onDragEnd = (result) => {
+    const { destination, source, DraggableID } = result;
 
-
-function App() {
-
-  //Tasks in local storage
-  let tasksIniciales = JSON.parse(localStorage.getItem('tasks'));
-  if( !tasksIniciales ) {
-    tasksIniciales = [];
-  }
-  
-  //Array the all tasks
-  const [tasks, guardarTasks] = useState(tasksIniciales);
-
-  //UseEffect to update when there are changes on the component
-  useEffect( () => {
-    let tasksIniciales = JSON.parse(localStorage.getItem('tasks'));
-
-    if(tasksIniciales) {
-      localStorage.setItem('tasks', JSON.stringify(tasks))
-    } else {
-      localStorage.setItem('tasks', JSON.stringify([]));
+    if(!destination) {
+      return;
     }
+    this.props.dispatch(
+      sort(
+        source.droppableId,
+        destination.droppableId,
+        source.index,
+        destination.index,
+        Draggable
+      )
+    );
+  };
 
-  }, [tasks]);
 
-  //Function to take the current tasks and take the new ones
-  const crearTask = task => { guardarTasks ([ ...tasks, task ])};
+  render() {
 
-  //Function remove a task by you id
-  const eliminarTask = id => {
-  const nuevasTasks = tasks.filter(task => task.id !== id)
-  guardarTasks(nuevasTasks);
+    const { lists } = this.props;
 
-
-}
-  return (
-    <Fragment>
-        <TaskRow />
+    return (
+    <DragDropContext onDragEnd={this.onDragEnd}>
+      <div className="App">
         <Navbar />
-        <Card 
-          crearTask={crearTask}
-        />
-        {tasks.map(task => (
-          <AddList
-          key={task.id}
-          task={task}
-          />
-        ))} 
-</Fragment>
-  );
+          <div style={styles.listsContainer}>
+            {lists.map(list => (
+              <TrelloList
+                listID={list.id}
+                key={list.id}
+                title={list.title}
+                cards={list.cards}
+                />
+            ))}
+            <TrelloButton list/>
+          </div>
+      </div>
+    </DragDropContext>
+    )
+  };
 };
-export default App;
+
+const styles = {
+  listsContainer: {
+    display: "flex",
+    flexDirection: "row"
+  }
+}
+
+//Connect with react-redux
+const mapStateToProps = state => ({
+  lists: state.lists
+});
+
+export default connect(mapStateToProps) (App);
