@@ -2,19 +2,27 @@ import React from 'react';
 import TrelloCard from './TrelloCard.jsx';
 import TrelloButton from './TrelloButton.jsx';
 import { Droppable, Draggable } from 'react-beautiful-dnd';
+import styled from "styled-components"
 
-
+const ListContainer = styled.div`
+background-color: #dfe3e6;
+border-radius: 3px;
+width: 300px;
+padding: 8px;
+height: 100%;
+margin-right: 8px;
+`;
 
 const TrelloList = ({ title, cards, listID, index }) => {
+  console.log(cards);
   return (
     <Draggable draggableId = {String(listID)} index = {index}>
 
   {provided => (
-    <div
+    <ListContainer
       {...provided.draggableProps}
       ref={provided.innerRef}
       {...provided.dragHandleProps}
-      style={styles.container}
     >
     <Droppable droppableId = {String(listID)} type="card">
  {provided => (
@@ -26,31 +34,18 @@ const TrelloList = ({ title, cards, listID, index }) => {
         index={index}
         text={card.text}
         id={card.id}
+        listID={listID}
       />
       ))}
-      <TrelloButton listID={listID} />
       {provided.placeholder}
+      <TrelloButton listID={listID} />
   </div>
   )}
 </Droppable>
-</div>
+</ListContainer>
 )}
 </Draggable>
 );
 };
-
- const styles = {
-   container: {
-     backgroundColor: "#dfe3e6",
-     /*backgroundColor: "transparent",*/
-     borderRadius: 4,
-     marginTop: 16,
-     width: 300,
-     padding: 8,
-     marginRight: 20,
-     height: '100%',
-     marginLeft: 40
-   }
- };
 
 export default TrelloList;
