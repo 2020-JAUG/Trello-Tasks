@@ -2,8 +2,8 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../assets/img/logo.png';
 
-const Navbar = () => ( 
-<> 
+const Navbar = () => (
+<>
     <nav className="navbar navbar-expand-lg   navbar-light">
         <button className="navbar-toggler navbar-toggle-rigth" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
@@ -24,7 +24,7 @@ const Navbar = () => (
                     </li>
                 </ul>
                     <a className="navbar-brand hidden-md-down font-weight-bold" href="https://blog.trello.com" target="_blank" rel="noreferrer"><h3>Trello</h3></a>
-               
+
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
                     <a className="nav-link bi bi-github" href="https://github.com/2020-JAUG" target="_blank" rel="noreferrer">{}</a>
