@@ -16,7 +16,6 @@ class App extends Component {
 //When we Dragg and drop the lists
   onDragEnd = result => {
     const { destination, source, draggableId, type } = result;
-    console.log("hi from func", type)
     if(!destination) {
       return;
     }
@@ -54,6 +53,7 @@ class App extends Component {
                   index={index}
                 />
               ))}
+              {provided.placeholder}
             <TrelloButton list/>
           </ListContainer>
           )}
