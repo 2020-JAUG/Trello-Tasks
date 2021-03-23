@@ -29,14 +29,6 @@ const initialState = [
             {
                 id: `card-${3}`,
                 text: "Y renderizamos varias tarjetas en nuestra lista con static data"
-            },
-            {
-                id: `card-${4}`,
-                text:"Tambien podemos cambiar titulos"
-            },
-            {
-                id: `card-${5}`,
-                text:"Tambien podemos cambiar titulos por otros titulos"
             }
         ]
     },
@@ -61,6 +53,8 @@ const listsReducer = (state = initialState, action) => {
                     id: `card-${cardID}`
                 };
                 cardID +=1;
+
+                console.log("action received", action)
 
                 const newState = state.map(list => {
                     if(list.id === action.payload.listID) {
@@ -100,6 +94,7 @@ const listsReducer = (state = initialState, action) => {
                             const list = state.find(list => droppableIdStart === list.id);
                             const card = list.cards.splice(droppableIndexStart, 1);
                             list.cards.splice(droppableIndexEnd, 0, ...card);
+                            return { ...state, [droppableIdStart]: list };
                         }
 
                         //Other list
