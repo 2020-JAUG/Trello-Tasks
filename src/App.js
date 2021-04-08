@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Navbar from './components/Navbar.jsx';
+import NavBar from './components/NavBar.jsx';
 import TrelloList from './components/TrelloList.jsx';
 import { connect } from 'react-redux';
 import TrelloButton from './components/TrelloButton.jsx';
@@ -37,7 +37,7 @@ class App extends Component {
 
     return (
     <DragDropContext onDragEnd={this.onDragEnd}>
-        <Navbar />
+        <NavBar />
         <Droppable droppableId="all-lists" direction="horizontal" type="list">
           {provided => (
             <ListContainer
