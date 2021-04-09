@@ -47,17 +47,17 @@ const listsReducer = (state = initialState, action) => {
             listID += 1
             return [...state, newList];
         //Create the newCard
-            case CONSTANTS.ADD_CARD: {
+            case CONSTANTS.ADD_CARD:{
                 const newCard = {
                     text: action.payload.text,
                     id: `card-${cardID}`
                 };
-                cardID +=1;
+                cardID += 1;
 
                 console.log("action received", action)
 
                 const newState = state.map(list => {
-                    if(list.id === action.payload.listID) {
+                    if (list.id === action.payload.listID) {
                         return {
                             ...list,
                             cards: [...list.cards, newCard]
@@ -69,7 +69,6 @@ const listsReducer = (state = initialState, action) => {
 
                 return newState;
             }
-
                 //Create a copy of our state
                 case CONSTANTS.DRAG_HAPPENED:
                     const {
@@ -83,7 +82,7 @@ const listsReducer = (state = initialState, action) => {
                         const newState = [...state];
 
                         //Dragging lists around
-                        if(type === "lists") {
+                        if(type === "list") {
                             const list = newState.splice(droppableIndexStart, 1);
                             newState.splice(droppableIndexEnd, 0, ...list);
                             return newState;
@@ -94,7 +93,6 @@ const listsReducer = (state = initialState, action) => {
                             const list = state.find(list => droppableIdStart === list.id);
                             const card = list.cards.splice(droppableIndexStart, 1);
                             list.cards.splice(droppableIndexEnd, 0, ...card);
-                            return { ...state, [droppableIdStart]: list };
                         }
 
                         //Other list
