@@ -14,36 +14,36 @@ margin-right: 8px;
 `;
 
 const TrelloList = ({ title, cards, listID, index }) => {
-  console.log(cards);
+
   return (
     <Draggable draggableId = {String(listID)} index = {index}>
-
-  {provided => (
-    <ListContainer
-      {...provided.draggableProps}
-      ref={provided.innerRef}
-      {...provided.dragHandleProps}
-    >
-    <Droppable droppableId = {String(listID)} type="card">
- {provided => (
-  <div {...provided.droppableProps} ref={provided.innerRef}>
-    <h4>{title}</h4>
-    {cards.map((card, index) => (
-      <TrelloCard
-        key={card.id}
-        index={index}
-        text={card.text}
-        id={card.id}
-      />
-      ))}
-      {provided.placeholder}
-      <TrelloButton listID={listID} />
-  </div>
-  )}
-</Droppable>
-</ListContainer>
-)}
-</Draggable>
+      {provided => (
+        <ListContainer
+          {...provided.draggableProps}
+          {...provided.dragHandleProps}
+          ref={provided.innerRef}
+        >
+          <Droppable droppableId = {String(listID)} type="card">
+            {provided => (
+              <div {...provided.droppableProps} ref={provided.innerRef}>
+                <h4>{title}</h4>
+                  {cards.map((card, index) => (
+                    <TrelloCard
+                      key={card.id}
+                      index={index}
+                      text={card.text}
+                      id={card.id}
+                      listID={listID}
+                    />
+                  ))}
+                  {provided.placeholder}
+                  <TrelloButton listID={listID} />
+                </div>
+              )}
+          </Droppable>
+        </ListContainer>
+      )}
+    </Draggable>
 );
 };
 
