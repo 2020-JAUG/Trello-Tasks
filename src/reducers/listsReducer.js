@@ -10,11 +10,11 @@ const initialState = [
         cards: [
             {
                 id: `card-${0}`,
-                text:"hola esto son pruebas"
+                text:" 1. Hola, aquí tienes un administrador de tareas, similar a Trello."
             },
             {
                 id: `card-${1}`,
-                text: "hola esta es la prueba dos para las cards"
+                text: "2. Este es otro reto de ¡GeekHubs! esta desarrollado con react-app redux-bootstrap. Entre otros marcos de interfaz."
             },
         ]
     },
@@ -24,13 +24,18 @@ const initialState = [
         cards: [
             {
                 id: `card-${2}`,
-                text:"Creamos nuestro primer redux"
+                text:"3. Puedes agregar listas y tarjetas, pronto añadiré más funcionalidad como editarlas y borrarlas."
             },
             {
                 id: `card-${3}`,
-                text: "Y renderizamos varias tarjetas en nuestra lista con static data"
+                text: "4. También arrastrar cada tarjeta o lista para soltarla donde desees."
             }
         ]
+    },
+    {
+        title: "Do",
+        id: `list-${2}`,
+        cards: []
     },
 ];
 
