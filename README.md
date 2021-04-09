@@ -1,5 +1,31 @@
-# Introducción al reto Trello con Create React App
+# Trello App
+---
 
-¡Reto GeekkHubs!😎
+#### Modules
+[[General](#App.js)] [[Condicionales](#condicionales)] [[Funciones](#funciones)] [[Objetos](#objetos)] [[Eventos](#eventos)]
 
-Comenzamos un nuevo reto para poner en práctica los conocimientos en React, esta vez nos aventuramos con crear una App para administrar tareas, tomando como ejemplo a Trello.
+
+### Introduction
+----
+
+- We started a new challenge to put the knowledge into practice in React.
+
+- This time we ventured to create an App to manage tasks, taking Trello as an example.
+
+- You will find JavaScript code and the use of redux with store, action, passing information through ¡props!
+
+# JSX - React
+---
+## General
+---
+- [We export the components, we pass the values ​​through props and make the context draggable.] (App.js)
+
+
+
+
+
+
+
+
+
+![GitHub Logo](https://github.com/2020-JAUG/website-grid/blob/master/img/faviconYellow.png?raw=true)
