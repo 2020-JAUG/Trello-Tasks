@@ -1,7 +1,7 @@
 # Trello App
 
 #### Modules
-[[General](#general)] [[Conditionals](#conditionals)] [[Funciones](#funciones)] [[Objetos](#objetos)] [[Eventos](#eventos)]
+[[General](#general)] [[Conditionals](#conditionals)] [[Functions](#functions)]
 
 
 ### Introduction
@@ -30,9 +30,22 @@
 ## Conditionals
 
 - [Use of ternaries to give different styles to the buttons](src/components/TrelloButton.jsx)
-- [](src/reducers/listsReducer.js)
+- [Conditional for placeholders, line 84](src/components/TrelloButton.jsx)
+- [Conditions when dragging lists, line 89](src/reducers/listsReducer.js)
 
 
+## Functions
+- [We document the actions](src/actions/index.jsx)
+- [We pass the data through payload to be read](src/actions/ListsActions.jsx)
+- [We use ref to tell the DOM element](src/App.js)
+- [We read the function with your data and the state changes](src/reducers/listsReducer.js)
+- [We make use of combineReducers](src/reducers/index.js)
+- [Event to read the values ​​of the inputs, line 28](src/components/TrelloButton.jsx)
+- [Functions to add lists and cards, and we pass data through props](src/components/TrelloButton.jsx)
+
+## Proyects
+- <a href="https://github.com/2020-JAUG">This is a link to my repositories</a>
+- [[Modules](#modules)]
 
 
 ![GitHub Logo](https://github.com/2020-JAUG/website-grid/blob/master/img/faviconYellow.png?raw=true)
