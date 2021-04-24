@@ -20,7 +20,7 @@ const initialState = [
     },
     {
         title: "Doing",
-        id: `list-${1}`,
+        // id: `list-${1}`,
         cards: [
             {
                 id: `card-${2}`,
@@ -35,7 +35,8 @@ const initialState = [
     {
         title: "Do",
         id: `list-${4}`,
-        cards: []
+        cards: [],
+        productoeliminar: null
     },
 ];
 
@@ -74,6 +75,14 @@ const listsReducer = (state = initialState, action) => {
 
                 return newState;
             }
+
+            case CONSTANTS.DELETE_CARD: {
+                const { listID, id } = action.payload;
+                const list = state[listID];
+                const newCards = list.cards.filter(cardID => cardID !== id, state.productoeliminar);
+                return { ...state, productoeliminar: action.payload, [listID]: { ...list, cards: newCards } };
+            }
+
                 //Create a copy of our state
                 case CONSTANTS.DRAG_HAPPENED:
                     const {

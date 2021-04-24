@@ -3,6 +3,7 @@ import TrelloCard from './TrelloCard.jsx';
 import TrelloButton from './TrelloButton.jsx';
 import { Droppable, Draggable } from 'react-beautiful-dnd';
 import styled from "styled-components"
+import { deleteCard } from '../actions/CardActions.jsx';
 
 const ListContainer = styled.div`
 background-color: #dfe3e6;
@@ -12,6 +13,7 @@ padding: 8px;
 height: 100%;
 margin-right: 8px;
 `;
+
 
 const TrelloList = ({ title, cards, listID, index }) => {
 
@@ -34,6 +36,7 @@ const TrelloList = ({ title, cards, listID, index }) => {
                       text={card.text}
                       id={card.id}
                       listID={listID}
+                      deleteCard={deleteCard}
                     />
                   ))}
                   {provided.placeholder}

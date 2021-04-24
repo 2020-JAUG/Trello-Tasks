@@ -57,6 +57,14 @@ class TrelloButton extends React.Component {
         };
     };
 
+     handleDeleteCard = () => {
+        const { dispatch, listID, id } = this.props;
+
+
+        console.log(listID);
+        dispatch(this.handleDeleteCard (id, listID));
+      };
+
     renderAddButton = () => {
         const { list } = this.props;
 
@@ -113,6 +121,7 @@ class TrelloButton extends React.Component {
             </Card>
             <div style={styles.formButtonGroup}>
                 <Button
+                    onClick={this.handleDeleteCard}
                     onMouseDown={ list ? this.handleAddList : this.handleAddCard }
                     variant='contained'
                     style={{ color: 'white', backgroundColor: '#5aac44' }}
