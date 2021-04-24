@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/2020-JAUG/Trello-Tasks/static/css/main.38c7a718.chunk.css",
-    "main.js": "/2020-JAUG/Trello-Tasks/static/js/main.9eb34b00.chunk.js",
-    "main.js.map": "/2020-JAUG/Trello-Tasks/static/js/main.9eb34b00.chunk.js.map",
-    "runtime-main.js": "/2020-JAUG/Trello-Tasks/static/js/runtime-main.efc33584.js",
-    "runtime-main.js.map": "/2020-JAUG/Trello-Tasks/static/js/runtime-main.efc33584.js.map",
-    "static/css/2.150d169a.chunk.css": "/2020-JAUG/Trello-Tasks/static/css/2.150d169a.chunk.css",
-    "static/js/2.8c6dc493.chunk.js": "/2020-JAUG/Trello-Tasks/static/js/2.8c6dc493.chunk.js",
-    "static/js/2.8c6dc493.chunk.js.map": "/2020-JAUG/Trello-Tasks/static/js/2.8c6dc493.chunk.js.map",
-    "static/js/3.c3bcfade.chunk.js": "/2020-JAUG/Trello-Tasks/static/js/3.c3bcfade.chunk.js",
-    "static/js/3.c3bcfade.chunk.js.map": "/2020-JAUG/Trello-Tasks/static/js/3.c3bcfade.chunk.js.map",
-    "index.html": "/2020-JAUG/Trello-Tasks/index.html",
-    "static/css/2.150d169a.chunk.css.map": "/2020-JAUG/Trello-Tasks/static/css/2.150d169a.chunk.css.map",
-    "static/css/main.38c7a718.chunk.css.map": "/2020-JAUG/Trello-Tasks/static/css/main.38c7a718.chunk.css.map",
-    "static/js/2.8c6dc493.chunk.js.LICENSE.txt": "/2020-JAUG/Trello-Tasks/static/js/2.8c6dc493.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/2020-JAUG/Trello-Tasks/static/media/Ola.c2d61e39.jpg"
+    "main.css": "/2020-JAUG/Trello-Tasks/tree/master/src/static/css/main.eb1d561f.chunk.css",
+    "main.js": "/2020-JAUG/Trello-Tasks/tree/master/src/static/js/main.9eb34b00.chunk.js",
+    "main.js.map": "/2020-JAUG/Trello-Tasks/tree/master/src/static/js/main.9eb34b00.chunk.js.map",
+    "runtime-main.js": "/2020-JAUG/Trello-Tasks/tree/master/src/static/js/runtime-main.ceeb19df.js",
+    "runtime-main.js.map": "/2020-JAUG/Trello-Tasks/tree/master/src/static/js/runtime-main.ceeb19df.js.map",
+    "static/css/2.150d169a.chunk.css": "/2020-JAUG/Trello-Tasks/tree/master/src/static/css/2.150d169a.chunk.css",
+    "static/js/2.8dae4bdc.chunk.js": "/2020-JAUG/Trello-Tasks/tree/master/src/static/js/2.8dae4bdc.chunk.js",
+    "static/js/2.8dae4bdc.chunk.js.map": "/2020-JAUG/Trello-Tasks/tree/master/src/static/js/2.8dae4bdc.chunk.js.map",
+    "static/js/3.c3bcfade.chunk.js": "/2020-JAUG/Trello-Tasks/tree/master/src/static/js/3.c3bcfade.chunk.js",
+    "static/js/3.c3bcfade.chunk.js.map": "/2020-JAUG/Trello-Tasks/tree/master/src/static/js/3.c3bcfade.chunk.js.map",
+    "index.html": "/2020-JAUG/Trello-Tasks/tree/master/src/index.html",
+    "static/css/2.150d169a.chunk.css.map": "/2020-JAUG/Trello-Tasks/tree/master/src/static/css/2.150d169a.chunk.css.map",
+    "static/css/main.eb1d561f.chunk.css.map": "/2020-JAUG/Trello-Tasks/tree/master/src/static/css/main.eb1d561f.chunk.css.map",
+    "static/js/2.8dae4bdc.chunk.js.LICENSE.txt": "/2020-JAUG/Trello-Tasks/tree/master/src/static/js/2.8dae4bdc.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/2020-JAUG/Trello-Tasks/tree/master/src/static/media/Ola.c2d61e39.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.efc33584.js",
+    "static/js/runtime-main.ceeb19df.js",
     "static/css/2.150d169a.chunk.css",
-    "static/js/2.8c6dc493.chunk.js",
-    "static/css/main.38c7a718.chunk.css",
+    "static/js/2.8dae4bdc.chunk.js",
+    "static/css/main.eb1d561f.chunk.css",
     "static/js/main.9eb34b00.chunk.js"
   ]
 }
