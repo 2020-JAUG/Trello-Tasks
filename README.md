@@ -48,4 +48,4 @@
 - [[Modules](#modules)]
 
 
-![GitHub Logo](https://github.com/2020-JAUG/website-grid/blob/master/img/faviconYellow.png?raw=true)
+    ![GitHub Logo](img/faviconYellow.png)
